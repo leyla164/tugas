@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Hitung Gaji </title>
+<center>
+    <br>
+    <h2>MENGHITUNG GAJI</h2>
+<script type="text/javascript">
+  function hitung()
+{
+        if(document.getElementById("gp").value == "")
+        {
+        alert("Gaji Pokok Tidak Boleh Kosong");
+        document.getElementById("gp").focus;
+        return false;
+        }
+        var gaji = document.getElementById("gp").value;
+        var a = eval(gaji) * 0.1 ;
+        var b = eval(gaji) + eval(a) * 10.0;
+        var c = eval(gaji) + eval(a) - eval(b);
+        document.getElementById("ta").value = a;
+        document.getElementById("ti").value = b;
+        document.getElementById("gt").value = c;
+        }
+</script>
+</head>
+<body>
+   
+<pre>
+       Nama :            <input type="text">
+       Gaji Pokok :      <input type="text" id="gp" >
+       Tunjangan  :      <input type="text" id="ta">
+       pajak         :   <input type="text" id="ti">
+       Gaji Total    :   <input type="text" id="gt">
+
+     <br>
+    <input type="button" value="Hitung" onclick="hitung()">
+ </pre>
+</center>
+</body>
+</html>
